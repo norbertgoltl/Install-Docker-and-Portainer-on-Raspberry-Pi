@@ -1,0 +1,45 @@
+{
+  "version": "2",
+  "templates": [
+    {
+      "categories": [
+        "Other",
+        "Tools"
+      ],
+      "description": "A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.",
+      "image": "b4bz/homer:latest",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/homer.png",
+      "name": "homer",
+      "note": "This container requires a yml file within the config volume. See the documentation here https://github.com/bastienwirtz/homer",
+      "platform": "linux",
+      "ports": [
+        "8902:8080/tcp"
+      ],
+      "restart_policy": "always",
+      "title": "Homer",
+      "type": 1,
+      "env": [
+        {
+          "default": "1000",
+          "label": "GID",
+          "name": "GID"
+        },
+        {
+          "default": "1000",
+          "label": "UID",
+          "name": "UID"
+        }
+      ],
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Homer/assets",
+          "container": "/www/assets"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/Homer",
+          "container": "/www/config.yml"
+        }
+      ]
+    }
+  ]
+}
