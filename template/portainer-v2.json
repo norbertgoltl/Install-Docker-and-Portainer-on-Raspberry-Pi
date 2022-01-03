@@ -6,12 +6,12 @@
         "Other",
         "Tools"
       ],
-      "description": "A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.",
-      "image": "b4bz/homer:latest",
-      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/homer.png",
       "name": "homer",
+      "description": "A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.",
       "note": "This container requires a yml file within the config volume. See the documentation here https://github.com/bastienwirtz/homer",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/homer.png",
       "platform": "linux",
+      "image": "b4bz/homer:latest",
       "ports": [
         "8902:8080/tcp"
       ],
@@ -38,6 +38,55 @@
         {
           "bind": "/portainer/Files/AppData/Config/Homer",
           "container": "/www/config.yml"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "HomeAutomation"
+      ],
+      "name": "homebridge",
+      "description": "Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.",
+      "note": "Bringing HomeKit support where there is none",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/homebridge.png",
+      "platform": "linux",
+      "image": "oznu/homebridge:latest",
+      "restart_policy": "always",
+      "title": "Homebridge",
+      "type": 1,
+      "network": "host",
+      "privileged": true,
+      "env": [
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1",
+          "label": "HOMEBRIDGE_CONFIG_UI",
+          "name": "HOMEBRIDGE_CONFIG_UI"
+        },
+        {
+          "default": "8581",
+          "label": "HOMEBRIDGE_CONFIG_UI_PORT",
+          "name": "HOMEBRIDGE_CONFIG_UI_PORT"
+        },
+        {
+          "default": "America/New_York",
+          "label": "TZ",
+          "name": "TZ"
+        }
+      ],
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/homebridge",
+          "container": "/homebridge"
         }
       ]
     }
