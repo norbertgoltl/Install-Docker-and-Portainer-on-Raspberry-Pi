@@ -50,7 +50,7 @@
       "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/pi-hole.png",
       "platform": "linux",
       "image": "pihole/pihole:latest",
-      "name": "pihole",
+      "name": "pi-hole",
       "ports": [
         "53:53/tcp",
         "53:53/udp",
@@ -236,7 +236,7 @@
       "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/minecraft.png",
       "platform": "linux",
       "image": "itzg/minecraft-server:latest",
-      "name": "minecraft_server",
+      "name": "minecraft-server",
       "restart_polocy": "unless-stopped",
       "type": 1,
       "ports": [
