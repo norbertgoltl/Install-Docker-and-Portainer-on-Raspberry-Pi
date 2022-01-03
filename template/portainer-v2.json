@@ -44,6 +44,37 @@
       "categories": [
         "Tools"
       ],
+      "title": "Pi-Hole",
+      "description": "The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.",
+      "note": "See the documentation here https://github.com/pi-hole/pi-hole",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/pi-hole.png",
+      "platform": "linux",
+      "image": "pihole/pihole:latest",
+      "name": "pihole",
+      "ports": [
+        "53:53/tcp",
+        "53:53/udp",
+        "67:67/udp",
+        "1010:80/tcp",
+        "443:443/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/PiHole",
+          "container": "/etc/pihole"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/PiHole/DNS",
+          "container": "/etc/dnsmasq.d"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Tools"
+      ],
       "title": "Samba",
       "description": "Samba has provided secure, stable and fast file and print services for all clients using the SMB/CIFS protocol, such as all versions of DOS and Windows, OS/2, Linux and many others.",
       "note": "See the documentation here https://github.com/dperson/samba",
