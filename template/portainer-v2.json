@@ -136,6 +136,49 @@
     },
     {
       "categories": [
+        "Tools"
+      ],
+      "title": "Transmission",
+      "description": "Transmission is a cross-platform BitTorrent client.",
+      "note": "See the documentation here https://github.com/transmission/transmission",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/transmission.png",
+      "platform": "linux",
+      "image": "linuxserver/transmission:latest",
+      "name": "transmission",
+      "ports": [
+        "9091:9091/tcp",
+        "51413:51413/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "type": 1,
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        }
+      ],
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Transmission",
+          "container": "/config"
+        },
+        {
+          "bind": "/portainer/Files/Downloads",
+          "container": "/downloads"
+        },
+        {
+          "container": "/watch"
+        }
+      ]
+    },
+    {
+      "categories": [
         "Smart Home"
       ],
       "title": "Homebridge",
