@@ -3,7 +3,6 @@
   "templates": [
     {
       "categories": [
-        "Other",
         "Tools"
       ],
       "name": "homer",
@@ -43,7 +42,7 @@
     },
     {
       "categories": [
-        "HomeAutomation"
+        "Smart Home"
       ],
       "name": "homebridge",
       "description": "Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.",
