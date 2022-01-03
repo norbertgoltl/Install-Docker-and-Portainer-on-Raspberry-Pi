@@ -42,6 +42,69 @@
     },
     {
       "categories": [
+        "Tools"
+      ],
+      "name": "Samba",
+      "description": "Samba has provided secure, stable and fast file and print services for all clients using the SMB/CIFS protocol, such as all versions of DOS and Windows, OS/2, Linux and many others.",
+      "note": "See the documentation here https://github.com/dperson/samba",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/samba.png",
+      "platform": "linux",
+      "image": "dperson/samba:latest",
+      "ports": [
+        "139:139/tcp",
+        "445:445/tcp"
+      ],
+      "command": "",
+      "restart_policy": "always",
+      "title": "Samba",
+      "type": 1,
+      "privileged": true,
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "USERID",
+          "name": "USERID"
+        },
+        {
+          "default": "1000",
+          "label": "GROUPID",
+          "name": "GROUPID"
+        },
+        {
+          "default": "guest;guest",
+          "label": "USER",
+          "name": "USER"
+        },
+        {
+          "default": "true",
+          "label": "PERMISSIONS",
+          "name": "PERMISSIONS"
+        },
+        {
+          "default": "portainer;/share;yes;no;yes;guest",
+          "label": "SHARE",
+          "name": "SHARE"
+        }
+      ],
+      "volumes": [
+        {
+          "bind": "/portainer/Downloads",
+          "container": "/share"
+        }
+      ]
+    },
+    {
+      "categories": [
         "Smart Home"
       ],
       "name": "homebridge",
