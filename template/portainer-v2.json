@@ -81,7 +81,7 @@
       "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/samba.png",
       "platform": "linux",
       "image": "dperson/samba:latest",
-      "name": "Samba",
+      "name": "samba",
       "ports": [
         "139:139/tcp",
         "445:445/tcp"
@@ -171,7 +171,7 @@
           "name": "HOMEBRIDGE_CONFIG_UI_PORT"
         },
         {
-          "default": "America/New_York",
+          "default": "Europe/Budapest",
           "label": "TZ",
           "name": "TZ"
         }
@@ -193,7 +193,7 @@
       "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/minecraft.png",
       "platform": "linux",
       "image": "itzg/minecraft-server:latest",
-      "name": "minecraft",
+      "name": "minecraft_server",
       "restart_polocy": "unless-stopped",
       "type": 1,
       "ports": [
