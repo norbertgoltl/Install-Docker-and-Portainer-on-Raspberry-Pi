@@ -140,6 +140,31 @@
     },
     {
       "type": 1,
+      "title": "Shell in a Box",
+      "description": "Shell In A Box is a web based terminal emulator.",
+      "image": "spali/shellinabox",
+      "name": "shellinabox",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/shell-in-a-box.png",
+      "env": [
+        {
+          "name": "SHELLINABOX_DISABLE_SSL",
+          "label": "SHELLINABOX_DISABLE_SSL",
+          "description": "",
+          "default": "1"
+        }
+      ],
+      "ports": [
+        "4200:4200/tcp"
+      ],
+      "restart_policy": "always",
+      "note": "See the documentation here https://github.com/shellinabox/shellinabox",
+      "platform": "linux",
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "type": 1,
       "title": "Transmission",
       "description": "Transmission is a cross-platform BitTorrent client.",
       "image": "linuxserver/transmission:latest",
