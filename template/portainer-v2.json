@@ -70,6 +70,12 @@
           "description": "",
           "default": "MyMini"
         }
+      ],
+      "restart_policy": "always",
+      "note": "This container requires a yml file within the config volume. See the documentation here https://hub.docker.com/r/vladgh/minidlna",
+      "platform": "linux",
+      "categories": [
+        "Tools"
       ]
     },
     {
