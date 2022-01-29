@@ -49,7 +49,7 @@
       "description": "The MiniDNLA daemon serves media files (music, pictures, and video) to clients on a network.",
       "image": "vladgh/minidlna:latest",
       "name": "minidlna",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/minidlna.png",
       "network": "host",
       "volumes": [
         {
@@ -72,7 +72,7 @@
         }
       ],
       "restart_policy": "always",
-      "note": "This container requires a yml file within the config volume. See the documentation here https://hub.docker.com/r/vladgh/minidlna",
+      "note": "This container requires a yml file within the config volume. See the documentation here https://hub.docker.com/r/vladgh/minidlna and configuration options here https://manpages.ubuntu.com/manpages/xenial/man5/minidlna.conf.5.html",
       "platform": "linux",
       "categories": [
         "Tools"
