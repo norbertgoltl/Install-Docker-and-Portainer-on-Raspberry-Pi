@@ -45,6 +45,35 @@
     },
     {
       "type": 1,
+      "title": "MiniDLNA",
+      "description": "The MiniDNLA daemon serves media files (music, pictures, and video) to clients on a network.",
+      "image": "vladgh/minidlna:latest",
+      "name": "minidlna",
+      "logo": "",
+      "network": "host",
+      "volumes": [
+        {
+          "bind": "/portainer/Files/Media",
+          "container": "/media"
+        }
+      ],
+      "env": [
+        {
+          "name": "MINIDLNA_MEDIA_DIR",
+          "label": "MINIDLNA_MEDIA_DIR",
+          "description": "",
+          "default": "/media"
+        },
+        {
+          "name": "MINIDLNA_FRIENDLY_NAME",
+          "label": "MINIDLNA_FRIENDLY_NAME",
+          "description": "",
+          "default": "MyMini"
+        }
+      ]
+    },
+    {
+      "type": 1,
       "title": "Pi-Hole",
       "description": "The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.",
       "image": "pihole/pihole:latest",
