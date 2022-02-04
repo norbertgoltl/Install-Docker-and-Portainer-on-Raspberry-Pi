@@ -222,20 +222,20 @@
       "description": "Open-source project management tool",
       "image": "redmine:latest",
       "name": "redmone",
-      "logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
-      "volumes":[
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/redmine.png",
+      "volumes": [
         {
           "bind": "/portainer/Files/AppData/Config/Redmine/files",
           "container":"/usr/src/redmine/files"
         }
       ],
-      "ports":[
+      "ports": [
         "3000/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "note":"Default user and password are admin/admin. See the documentation here https://redmine.org/.",
+      "note": "Default user and password are admin/admin. See the documentation here https://redmine.org/.",
       "platform": "linux",
-      "categories":[
+      "categories": [
         "Project Management"
       ]
     },
