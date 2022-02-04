@@ -7,7 +7,7 @@
       "description": "AdGuard Home is a network-wide software for blocking ads & tracking.",
       "image": "adguard/adguardhome:latest",
       "name": "adguard-home",
-      "logo": "",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/adguard-home.png",
       "volumes": [
         {
           "bind": "/portainer/Files/AppData/Config/AdGuardHome/work",
