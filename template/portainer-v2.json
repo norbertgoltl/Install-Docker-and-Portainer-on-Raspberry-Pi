@@ -3,6 +3,36 @@
   "templates": [
     {
       "type": 1,
+      "title": "AdGuard Home",
+      "description": "AdGuard Home is a network-wide software for blocking ads & tracking.",
+      "image": "adguard/adguardhome:latest",
+      "name": "adguard-home",
+      "logo": "",
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/AdGuardHome/work",
+          "container": "/opt/adguardhome/work"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/AdGuardHome/conf",
+          "container": "/opt/adguardhome/conf"
+        }
+      ],
+      "ports": [
+        "53:53/tcp",
+        "53:53/udp",
+        "80:80/tcp",
+        "3000:3000/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "note": "See the documentation here https://hub.docker.com/r/adguard/adguardhome.",
+      "platform": "linux",
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "type": 1,
       "title": "Homer",
       "description": "A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.",
       "image": "b4bz/homer:latest",
