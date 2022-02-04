@@ -37,7 +37,7 @@
         "8902:8080/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "note": "This container requires a yml file within the config volume. See the documentation here https://github.com/bastienwirtz/homer",
+      "note": "This container requires a yml file within the config volume. See the documentation here https://github.com/bastienwirtz/homer.",
       "platform": "linux",
       "categories": [
         "Tools"
@@ -72,7 +72,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "note": "This container requires a yml file within the config volume. See the documentation here https://hub.docker.com/r/vladgh/minidlna and configuration options here https://manpages.ubuntu.com/manpages/xenial/man5/minidlna.conf.5.html",
+      "note": "This container requires a yml file within the config volume. See the documentation here https://hub.docker.com/r/vladgh/minidlna and configuration options here https://manpages.ubuntu.com/manpages/xenial/man5/minidlna.conf.5.html.",
       "platform": "linux",
       "categories": [
         "Tools"
@@ -104,7 +104,7 @@
         "443:443/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "note": "See the documentation here https://github.com/pi-hole/pi-hole",
+      "note": "See the documentation here https://github.com/pi-hole/pi-hole.",
       "platform": "linux",
       "categories": [
         "Tools"
@@ -167,7 +167,7 @@
       ],
       "privileged": true,
       "restart_policy": "unless-stopped",
-      "note": "See the documentation here https://github.com/dperson/samba",
+      "note": "See the documentation here https://github.com/dperson/samba.",
       "platform": "linux",
       "categories": [
         "Tools"
@@ -210,10 +210,33 @@
         "51413:51413/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "note": "See the documentation here https://github.com/transmission/transmission",
+      "note": "See the documentation here https://github.com/transmission/transmission.",
       "platform": "linux",
       "categories": [
         "Tools"
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Redmine",
+      "description": "Open-source project management tool",
+      "image": "redmine:latest",
+      "name": "redmone",
+      "logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
+      "volumes":[
+        {
+          "bind": "/portainer/Files/AppData/Config/Redmine/files",
+          "container":"/usr/src/redmine/files"
+        }
+      ],
+      "ports":[
+        "3000/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "note":"Default user and password are admin/admin. See the documentation here https://redmine.org/.",
+      "platform": "linux",
+      "categories":[
+        "Project Management"
       ]
     },
     {
@@ -259,7 +282,7 @@
       ],
       "privileged": true,
       "restart_policy": "unless-stopped",
-      "note": "Bringing HomeKit support where there is none",
+      "note": "Bringing HomeKit support where there is none.",
       "platform": "linux",
       "categories": [
         "Smart Home"
@@ -289,7 +312,7 @@
         "25565:25565/tcp"
       ],
       "restart_polocy": "no",
-      "note": "See the documentation here https://github.com/itzg/docker-minecraft-server",
+      "note": "See the documentation here https://github.com/itzg/docker-minecraft-server.",
       "platform": "linux",
       "categories": [
         "Games"
