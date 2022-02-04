@@ -36,7 +36,7 @@
       "ports": [
         "8902:8080/tcp"
       ],
-      "restart_policy": "always",
+      "restart_policy": "unless-stopped",
       "note": "This container requires a yml file within the config volume. See the documentation here https://github.com/bastienwirtz/homer",
       "platform": "linux",
       "categories": [
@@ -71,7 +71,7 @@
           "default": "MyMini"
         }
       ],
-      "restart_policy": "always",
+      "restart_policy": "unless-stopped",
       "note": "This container requires a yml file within the config volume. See the documentation here https://hub.docker.com/r/vladgh/minidlna and configuration options here https://manpages.ubuntu.com/manpages/xenial/man5/minidlna.conf.5.html",
       "platform": "linux",
       "categories": [
@@ -166,7 +166,7 @@
         "445:445/tcp"
       ],
       "privileged": true,
-      "restart_policy": "always",
+      "restart_policy": "unless-stopped",
       "note": "See the documentation here https://github.com/dperson/samba",
       "platform": "linux",
       "categories": [
@@ -258,7 +258,7 @@
         }
       ],
       "privileged": true,
-      "restart_policy": "always",
+      "restart_policy": "unless-stopped",
       "note": "Bringing HomeKit support where there is none",
       "platform": "linux",
       "categories": [
