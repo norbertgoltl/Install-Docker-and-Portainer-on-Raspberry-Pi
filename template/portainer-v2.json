@@ -89,16 +89,28 @@
       ],
       "env": [
         {
+          "name": "MINIDLNA_FRIENDLY_NAME",
+          "label": "MINIDLNA_FRIENDLY_NAME",
+          "description": "",
+          "default": "MyMini"
+        },
+        {
+          "name": "MINIDLNA_MAX_CONNECTIONS",
+          "label": "MINIDLNA_MAX_CONNECTIONS",
+          "description": "",
+          "default": "10"
+        },
+        {
           "name": "MINIDLNA_MEDIA_DIR",
           "label": "MINIDLNA_MEDIA_DIR",
           "description": "",
           "default": "/media"
         },
         {
-          "name": "MINIDLNA_FRIENDLY_NAME",
-          "label": "MINIDLNA_FRIENDLY_NAME",
+          "name": "MINIDLNA_ROOT_CONTAINER",
+          "label": "MINIDLNA_ROOT_CONTAINER",
           "description": "",
-          "default": "MyMini"
+          "default": "."
         }
       ],
       "restart_policy": "unless-stopped",
