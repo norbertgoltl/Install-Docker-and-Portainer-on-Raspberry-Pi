@@ -75,6 +75,25 @@
     },
     {
       "type": 1,
+      "title": "Mailhog",
+      "description": "MailHog is an email testing tool for developers.",
+      "image": "mailhog/mailhog:latest",
+      "name": "mailhog",
+      "logo": "",
+      "ports": [
+        "1025:1025",
+        "8025:8025"
+      ],
+      "privileged": true,
+      "restart_policy": "unless-stopped",
+      "note": "See the documentation here https://github.com/mailhog/MailHog.",
+      "platform": "linux",
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "type": 1,
       "title": "MiniDLNA",
       "description": "The MiniDNLA daemon serves media files (music, pictures, and video) to clients on a network.",
       "image": "vladgh/minidlna:latest",
