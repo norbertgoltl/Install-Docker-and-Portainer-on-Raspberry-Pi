@@ -77,12 +77,12 @@
       "type": 1,
       "title": "Mailhog",
       "description": "MailHog is an email testing tool for developers.",
-      "image": "cd2team/mailhog:latest",
+      "image": "mailhog/mailhog:latest",
       "name": "mailhog",
       "logo": "",
       "ports": [
-        "1025:1025",
-        "8025:8025"
+        "1025:1025/tcp",
+        "8025:8025/tcp"
       ],
       "privileged": true,
       "restart_policy": "unless-stopped",
