@@ -75,7 +75,7 @@
     },
     {
       "type": 1,
-      "title": "Mailhog",
+      "title": "Mailhog v1.01",
       "description": "MailHog is an email testing tool for developers.",
       "image": "mailhog/mailhog:latest",
       "name": "mailhog",
