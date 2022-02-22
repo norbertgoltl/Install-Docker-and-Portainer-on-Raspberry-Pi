@@ -236,6 +236,44 @@
     },
     {
       "type": 1,
+      "title": "Samba 2.0",
+      "description": "Samba has provided secure, stable and fast file and print services for all clients using the SMB/CIFS protocol, such as all versions of DOS and Windows, OS/2, Linux and many others.",
+      "image": "dperson/samba:latest",
+      "name": "samba",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/samba.png",
+      "command": "",
+      "env": [
+        {
+          "default": "guest;guest",
+          "label": "USER",
+          "name": "USER"
+        },
+        {
+          "default": "portainer;/share;yes;no;yes;guest",
+          "label": "SHARE",
+          "name": "SHARE"
+        }
+      ],
+      "volumes": [
+        {
+          "bind": "/portainer/Downloads",
+          "container": "/share"
+        }
+      ],
+      "ports": [
+        "139:139/tcp",
+        "445:445/tcp"
+      ],
+      "privileged": true,
+      "restart_policy": "unless-stopped",
+      "note": "See the documentation here https://github.com/dperson/samba.",
+      "platform": "linux",
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "type": 1,
       "title": "Transmission",
       "description": "Transmission is a cross-platform BitTorrent client.",
       "image": "linuxserver/transmission:latest",
