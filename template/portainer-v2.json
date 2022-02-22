@@ -236,7 +236,7 @@
     },
     {
       "type": 1,
-      "title": "Samba 2.0",
+      "title": "Samba from smb.conf",
       "description": "Samba has provided secure, stable and fast file and print services for all clients using the SMB/CIFS protocol, such as all versions of DOS and Windows, OS/2, Linux and many others.",
       "image": "dperson/samba:latest",
       "name": "samba",
@@ -244,14 +244,9 @@
       "command": "",
       "env": [
         {
-          "default": "guest;guest",
-          "label": "USER",
-          "name": "USER"
-        },
-        {
-          "default": "portainer;/share;yes;no;yes;guest",
-          "label": "SHARE",
-          "name": "SHARE"
+          "default": "/portainer",
+          "label": "INCLUDE",
+          "name": "INCLUDE"
         }
       ],
       "volumes": [
