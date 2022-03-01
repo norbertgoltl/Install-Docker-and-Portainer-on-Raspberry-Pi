@@ -242,13 +242,6 @@
       "name": "samba-include",
       "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/samba.png",
       "command": "",
-      "env": [
-        {
-          "default": "/portainer",
-          "label": "INCLUDE",
-          "name": "INCLUDE"
-        }
-      ],
       "volumes": [
         {
           "bind": "/portainer/Downloads",
