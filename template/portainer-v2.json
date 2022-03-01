@@ -238,16 +238,11 @@
       "type": 1,
       "title": "Samba v2",
       "description": "Samba has provided secure, stable and fast file and print services for all clients using the SMB/CIFS protocol, such as all versions of DOS and Windows, OS/2, Linux and many others.",
-      "image": "dperson/samba:latest",
+      "image": "servercontainers/samba:latest",
       "name": "samba-include",
       "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/samba.png",
       "command": "",
       "env": [
-        {
-          "default": "guest;guest",
-          "label": "USER",
-          "name": "USER"
-        },
         {
           "default": "/portainer",
           "label": "INCLUDE",
@@ -266,7 +261,7 @@
       ],
       "privileged": true,
       "restart_policy": "unless-stopped",
-      "note": "See the documentation here https://github.com/dperson/samba.",
+      "note": "See the documentation here https://github.com/ServerContainers/samba.",
       "platform": "linux",
       "categories": [
         "Tools"
