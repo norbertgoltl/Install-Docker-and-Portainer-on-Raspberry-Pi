@@ -159,24 +159,6 @@
           "label": "SHARED_DIRECTORY",
           "description": "",
           "default": "/nfsshare"
-        },
-        {
-          "name": "READ_ONLY",
-          "label": "READ_ONLY",
-          "description": "",
-          "default": "rw"
-        },
-        {
-          "name": "SYNC",
-          "label": "SYNC",
-          "description": "",
-          "default": "async"
-        },
-        {
-          "name": "PERMITTED",
-          "label": "PERMITTED",
-          "description": "",
-          "default": "192.168.0.*"
         }
       ],
       "ports": [
