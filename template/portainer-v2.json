@@ -146,6 +146,7 @@
       "image": "itsthenetwork/nfs-server-alpine:11-arm",
       "name": "nfs-server",
       "logo": "",
+      "network": "host",
       "volumes": [
         {
           "bind": "/portainer/Files/NFS",
