@@ -142,7 +142,7 @@
     {
       "type": 1,
       "title": "NFS server",
-      "description": "",
+      "description": "Network File Sharing (NFS) is a protocol that allows you to share directories and files with other Linux clients over a network.",
       "image": "itsthenetwork/nfs-server-alpine:11-arm",
       "name": "nfs-server",
       "logo": "",
@@ -161,8 +161,10 @@
         }
       ],
       "ports": [
-        "2049:2049/tcp"
+        "2049:2049/tcp",
+        "2049:2049/udp"
       ],
+      "privileged": true,
       "restart_policy": "unless-stopped",
       "note": "",
       "platform": "linux",
