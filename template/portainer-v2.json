@@ -160,6 +160,9 @@
           "default": "/nfsshare"
         }
       ],
+      "ports": [
+        "2049:2049/tcp"
+      ],
       "restart_policy": "unless-stopped",
       "note": "",
       "platform": "linux",
