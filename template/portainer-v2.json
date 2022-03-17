@@ -141,6 +141,34 @@
     },
     {
       "type": 1,
+      "title": "NFS server",
+      "description": "",
+      "image": "itsthenetwork/nfs-server-alpine:latest",
+      "name": "nfs-server",
+      "logo": "",
+      "volumes": [
+        {
+          "bind": "/portainer/Files/NFS",
+          "container": "/nfsshare"
+        }
+      ],
+      "env": [
+        {
+          "name": "SHARED_DIRECTORY",
+          "label": "SHARED_DIRECTORY",
+          "description": "",
+          "default": "/nfsshare"
+        }
+      ],
+      "restart_policy": "unless-stopped",
+      "note": "",
+      "platform": "linux",
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "type": 1,
       "title": "Pi-Hole",
       "description": "The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.",
       "image": "pihole/pihole:latest",
@@ -222,26 +250,6 @@
           "container": "/share"
         }
       ],
-      "ports": [
-        "139:139/tcp",
-        "445:445/tcp"
-      ],
-      "privileged": true,
-      "restart_policy": "unless-stopped",
-      "note": "See the documentation here https://github.com/dperson/samba.",
-      "platform": "linux",
-      "categories": [
-        "Tools"
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Samba v2",
-      "description": "Samba has provided secure, stable and fast file and print services for all clients using the SMB/CIFS protocol, such as all versions of DOS and Windows, OS/2, Linux and many others.",
-      "image": "dperson/samba:latest",
-      "name": "samba-v2",
-      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/samba.png",
-      "command": "",
       "ports": [
         "139:139/tcp",
         "445:445/tcp"
