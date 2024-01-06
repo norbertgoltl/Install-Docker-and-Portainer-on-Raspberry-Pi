@@ -40,7 +40,7 @@
       "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/apache-httpd.png",
       "volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/apache-httpd",
+					"bind": "/portainer/Files/AppData/Config/ApacheHTTPServer/",
 					"container": "/usr/local/apache2/htdocs/"
 				}
 			],
