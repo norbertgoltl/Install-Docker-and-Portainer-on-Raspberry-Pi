@@ -33,11 +33,47 @@
     },
     {
       "type": 1,
+      "title": "Apache HTTP Server",
+      "description": "The Apache HTTP Server is a free and open-source cross-platform web server software, released under the terms of Apache License 2.0. Apache is developed and maintained by an open community of developers under the auspices of the Apache Software Foundation.",
+      "image": "httpd:latest",
+      "name": "apache-httpd",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/apache-httpd.png",
+      "volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/apache-httpd",
+					"container": "/usr/local/apache2/htdocs/"
+				}
+			],
+      "ports": [
+				"8080:80/tcp",
+				"8443:443/tcp"
+			],
+      "env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+      "restart_policy": "unless-stopped",
+			"note": "See the documentation here https://httpd.apache.org/.",
+      "platform": "linux",
+      "categories": [
+				"Web Server"
+			]
+		},
+    {
+      "type": 1,
       "title": "Homer",
       "description": "A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.",
       "image": "b4bz/homer:latest",
       "name": "homer",
-      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/homer.png",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/homer.png",
       "command": "",
       "env": [
         {
@@ -98,7 +134,7 @@
       "description": "The MiniDNLA daemon serves media files (music, pictures, and video) to clients on a network.",
       "image": "vladgh/minidlna:latest",
       "name": "minidlna",
-      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/minidlna.png",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/minidlna.png",
       "network": "host",
       "volumes": [
         {
@@ -179,7 +215,7 @@
       "description": "The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.",
       "image": "pihole/pihole:latest",
       "name": "pi-hole",
-      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/pi-hole.png",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/pi-hole.png",
       "command": "",
       "volumes": [
         {
@@ -211,7 +247,7 @@
       "description": "Samba has provided secure, stable and fast file and print services for all clients using the SMB/CIFS protocol, such as all versions of DOS and Windows, OS/2, Linux and many others.",
       "image": "dperson/samba:latest",
       "name": "samba",
-      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/samba.png",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/samba.png",
       "command": "",
       "env": [
         {
@@ -274,7 +310,7 @@
       "description": "Transmission is a cross-platform BitTorrent client.",
       "image": "linuxserver/transmission:latest",
       "name": "transmission",
-      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/transmission.png",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/transmission.png",
       "env": [
         {
           "default": "1000",
@@ -340,7 +376,7 @@
       "description": "Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.",
       "image": "oznu/homebridge:latest",
       "name": "homebridge",
-      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/homebridge.png",
+      "logo": "hhttps://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/homebridge.png",
       "env": [
         {
           "default": "1000",
@@ -389,7 +425,7 @@
       "description": "This docker image provides a Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot. See the Versions section below for more information.",
       "image": "itzg/minecraft-server:latest",
       "name": "minecraft-server",
-      "logo": "https://raw.githubusercontent.com/norbertgoltl/install-docker-and-portainer-on-raspberry-pi/main/images/minecraft.png",
+      "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/minecraft.png",
       "env": [
         {
           "label": "EULA",
