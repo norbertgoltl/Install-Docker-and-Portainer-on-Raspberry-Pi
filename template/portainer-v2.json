@@ -10,11 +10,11 @@
       "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/adguard-home.png",
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/AdGuardHome/work",
+          "bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/AdGuardHome/work",
           "container": "/opt/adguardhome/work"
         },
         {
-          "bind": "/portainer/Files/AppData/Config/AdGuardHome/conf",
+          "bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/AdGuardHome/conf",
           "container": "/opt/adguardhome/conf"
         }
       ],
@@ -40,7 +40,7 @@
       "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/apache-httpd.png",
       "volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/ApacheHTTPServer/",
+					"bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/ApacheHTTPServer/htdocs",
 					"container": "/usr/local/apache2/htdocs/"
 				}
 			],
@@ -91,11 +91,11 @@
       ],
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/Homer/assets",
+          "bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/Homer/assets",
           "container": "/www/assets"
         },
         {
-          "bind": "/portainer/Files/AppData/Config/Homer",
+          "bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/Homer",
           "container": "/www/config.yml"
         }
       ],
@@ -219,11 +219,11 @@
       "command": "",
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/PiHole",
+          "bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/PiHole",
           "container": "/etc/pihole"
         },
         {
-          "bind": "/portainer/Files/AppData/Config/PiHole/DNS",
+          "bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/PiHole/DNS",
           "container": "/etc/dnsmasq.d"
         }
       ],
@@ -325,7 +325,7 @@
       ],
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/Transmission",
+          "bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/Transmission",
           "container": "/config"
         },
         {
@@ -356,7 +356,7 @@
       "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/redmine.png",
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/Redmine/files",
+          "bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/Redmine/files",
           "container":"/usr/src/redmine/files"
         }
       ],
@@ -407,7 +407,7 @@
       "network": "host",
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/homebridge",
+          "bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/homebridge",
           "container": "/homebridge"
         }
       ],
@@ -435,7 +435,7 @@
       ],
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/Minecraft-data",
+          "bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/Minecraft-data",
           "container": "/data"
         }
       ],
