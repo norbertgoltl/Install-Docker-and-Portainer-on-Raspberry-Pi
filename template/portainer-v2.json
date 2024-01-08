@@ -39,34 +39,34 @@
       "name": "apache-httpd",
       "logo": "https://raw.githubusercontent.com/norbertgoltl/rpi-hosted/main/images/apache-httpd.png",
       "volumes": [
-				{
-					"bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/ApacheHTTPServer/htdocs",
-					"container": "/usr/local/apache2/htdocs/"
+        {
+          "bind": "/home/pi/Application Support/Portainer/Files/AppData/Config/ApacheHTTPServer/www/",
+          "container": "/var/www/"
 				}
-			],
+      ],
       "ports": [
-				"80:80/tcp",
-				"443:443/tcp"
-			],
+        "80:80/tcp",
+        "443:443/tcp"
+      ],
       "env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        }
+      ],
       "restart_policy": "unless-stopped",
-			"note": "See the documentation here https://httpd.apache.org/.",
+      "note": "See the documentation here https://httpd.apache.org/.",
       "platform": "linux",
       "categories": [
-				"Web Server"
-			]
-		},
+        "Web Server"
+      ]
+    },
     {
       "type": 1,
       "title": "Homer",
